@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0" />
+
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: arial;   }
+
+        .png {
+            width: 100px;
+            height: 100px;
+            background:#ccc;
+            position:relative;
+            left: 10px;
+            top:20px;
+            /* position:relative;*/
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="png"></div>
+<div class="png" style="background:#0f0f0f"></div>
+
+</body>
+<script src="jquery-1.12.0.min.js"></script>
+<script>
+
+    //getOffsetSum 获取相对与document的偏移量
+    function getOffsetSum(ele){
+        var top= 0,left=0;
+        while(ele){
+            top+=ele.offsetTop;
+            left+=ele.offsetLeft;
+            ele=ele.offsetParent;
+        }
+        /*  alert(left+" : "+top);*/
+        return { top:top, left:left }
+    }
+    //var mainDiv=document.getElementById("main");
+    var mainDiv = document.getElementsByClassName("png");
+    console.log(mainDiv);
+    for(var i = 0; i < mainDiv.length; i++){
+        mainDiv[i].addEventListener("touchmove",touch,false);
+    }
+    function touch(e)
+    {
+        e.target.style.position="absolute";
+        switch(e.type)
+        {
+            case "touchmove":
+
+                var ele=getOffsetSum(e.target);
+                var left=ele.left;
+                var top=ele.top;
+
+                var x=e.touches[0].clientX-left/2;
+                var y=e.touches[0].clientY-top/2;
+                e.preventDefault();
+// alert(e.target.id);
+                e.target.style.marginLeft=x+"px";
+                e.target.style.marginTop=y+"px";
+
+                /* $(e.target).css("left","50px");
+                 $(e.target).css("top","50px");*/
+        }
+    }
+</script>
+</html>

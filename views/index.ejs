@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <!--&lt;!&ndash;[if lt IE 9]>-->
+  <!--<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>-->
+  <!--<![endif]&ndash;&gt;-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="shortcut icon" type="images/x-icon" href="images/favicon.jpg">
+  <title>服饰搭配小插件</title>
+
+  <!-- 新 Bootstrap 核心 CSS 文件 -->
+  <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
+  <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand title" href="#">晚上好</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="title"><a href="#">重置</a></li>
+        <li class="title"><a href="http://127.0.0.1:7516/upload">上传图片</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">外套半/全</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">选择衣服 <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a data-toggle="modal" data-target="#myModal" class="clothClick" type="1">帽子</a></li>
+            <li><a data-toggle="modal" data-target="#myModal" class="clothClick" type="2">衬衫</a></li>
+            <li><a data-toggle="modal" data-target="#myModal" class="clothClick" type="3">外套</a></li>
+            <li><a data-toggle="modal" data-target="#myModal" class="clothClick" type="4">裤子/裙子</a></li>
+            <li><a data-toggle="modal" data-target="#myModal" class="clothClick" type="5">鞋</a></li>
+            <li><a data-toggle="modal" data-target="#myModal" class="clothClick" type="6">包</a></li>
+            <li><a data-toggle="modal" data-target="#myModal" class="clothClick" type="7">饰品</a></li>
+            <!--<li class="divider"></li>-->
+            <!--<li><a href="#">添加类别</a></li>-->
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<div class="container-fluid board" id="testDiv">
+  <div class="hat">
+    <img src="images/hat.png" alt="hat" class="hat png">
+  </div>
+  <div class="shirt">
+    <img src="images/shirt.png" alt="shirt"class="shirt png">
+  </div>
+  <div class="coat">
+    <img src="images/coat.png" alt="coat" class="coat png">
+  </div>
+  <div class="trousers">
+    <img src="images/trousers.png" alt="trousers" class="png trousers">
+  </div>
+  <div class="shoes">
+    <img src="images/shoes.png" alt="shoes" class="shoes png">
+  </div>
+  <div class="bags">
+    <img src="images/bags.png" alt="bags" class="bags png">
+  </div>
+  <div class="ornaments1">
+    <img src="images/ornaments1.png" alt="ornaments1" class="png ornaments1">
+  </div>
+  <div class="ornaments2">
+    <img src="images/ornaments2.png" alt="ornaments2" class="png ornaments2">
+  </div>
+  <div class="ornaments3">
+    <img src="images/ornaments3.png" alt="ornaments3" class="png ornaments3">
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">选择替换</h4>
+      </div>
+      <div class="modal-body">
+
+
+        <div class="row">
+          正在加载...
+          <!--<img src="images/0.jpg" class="col-xs-4" alt="Responsive image" class="img-thumbnail" id="0">-->
+          <!--<img src="images/1.jpg" class="col-xs-4" alt="Responsive image" class="img-thumbnail" id="1">-->
+          <!--<img src="images/2.jpg" class="col-xs-4" alt="Responsive image" class="img-thumbnail" id="2">-->
+          <!--<img src="images/3.jpg" class="col-xs-4" alt="Responsive image" class="img-thumbnail" id="3">-->
+          <!--<img src="images/4.jpg" class="col-xs-4" alt="Responsive image" class="img-thumbnail" id="4">-->
+        </div>
+
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script type="text/javascript" src="javascripts/jquery-1.12.0.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script type="text/javascript" src="javascripts/bootstrap.min.js"></script>
+<!--<script src="js/index.js"></script>-->
+<script type="text/javascript" src="javascripts/index.js"></script>
+</body>
+</html>
+
+
