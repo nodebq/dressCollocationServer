@@ -41,7 +41,8 @@ upload.up = function (req, res) {//上传文件
                         res.end(fyscu.out(code.dataRedundancy));
                         return;
                     } else {//没有重复文件
-                        var dstPath = '.public/uploads/' + inputFile.originalFilename;
+                        var dstPath = 'public/uploads/' + inputFile.originalFilename;
+                        var path = 'uploads/' + inputFile.originalFilename;
                         //重命名为真实文件名
                         fs.rename(uploadedPath, dstPath, function (err) {
                             if (err) {
@@ -51,13 +52,13 @@ upload.up = function (req, res) {//上传文件
                                 return;
                             } else {
                                 //console.log('rename ok');
-                                console.log('insert into clothes (userId,type,url,name) values ('+req.query.userId+','+fields.type[0]+','+dstPath+','+inputFile.originalFilename+')');
+                                console.log('insert into clothes (userId,type,url,name) values ('+req.query.userId+','+fields.type[0]+','+path+','+inputFile.originalFilename+')');
                                 conn.check().query({//插入数据库
                                     sql: 'insert into clothes (userId,type,url,name) values (:userId,:type,:url,:name)',
                                     params: {
                                         userId: req.query.userId,
                                         type: fields.type[0],
-                                        url: dstPath,
+                                        url: path,
                                         name: inputFile.originalFilename
                                     }
                                 }, function (ee, rr) {

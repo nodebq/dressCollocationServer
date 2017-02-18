@@ -39,3 +39,5 @@ jspm_packages
 node_modules/*
 config.js
 .idea/*
+public/uploads/*
+public/files/*

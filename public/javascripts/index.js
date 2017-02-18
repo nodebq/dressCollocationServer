@@ -46,7 +46,7 @@ $(document).ready(function () {
         var id = $(this).attr('type');
         // console.log(id);
         // $(".modal-body").text(id);
-        $.get("http://127.0.0.1:7516/list",
+        $.get("http://119.29.160.77:7516/list",
             {
                 type: id,
                 size: 0,
@@ -56,7 +56,7 @@ $(document).ready(function () {
                 data = JSON.parse(data);
                 //console.log(data.data);
                 if (data.data.length) {
-                    var string1 = '<img src="';
+                    var string1 = '<img src="/';
                     var string2 = '" class="col-xs-4 img-thumbnail change" flag="' + id + '" alt="Responsive image" id="';
                     var string3 = '">';
                     var string = '';
@@ -188,7 +188,7 @@ $(document).ready(function () {
 
 
                 } else {
-                    $(".modal-body>.row").html("<p>这里啥都没有,快去</p><a href='http://127.0.0.1:7516/upload'>上传</a>");
+                    $(".modal-body>.row").html("<p>这里啥都没有,快去</p><a href='http://119.29.160.77:7516/upload'>上传</a>");
                 }
 
 
@@ -219,7 +219,7 @@ function doUpload() {
     //formData.append("inputFile", fileInputElement.files[0]);
     //console.log($("#type").val());
     $.ajax({
-        url: 'http://127.0.0.1:7516/file/uploading',
+        url: 'http://119.29.160.77:7516/file/uploading',
         type: 'POST',
         data: oData,
         async: false,
