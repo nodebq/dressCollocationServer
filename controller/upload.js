@@ -2,7 +2,7 @@ var fyscu = require('../libs/fyscu.js');
 var code = require('../libs/code.js');
 var conn = require('../libs/mysql.js');
 var multiparty = require('multiparty');
-var util = require('util');
+// var util = require('util');
 var fs = require('fs');
 
 var upload = {
